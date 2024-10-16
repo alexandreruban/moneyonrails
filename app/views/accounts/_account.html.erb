@@ -1,0 +1,8 @@
+<tr>
+  <td><%= account.name %></td>
+  <td><%= number_to_currency account.balance %></td>
+  <td>
+    <%= link_to "edit", edit_account_path(account) %>
+    <%= button_to "delete", account_path(account), method: :delete %>
+  </td>
+</tr>

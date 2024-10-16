@@ -1,0 +1,13 @@
+<%= form_with model: account do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :balance %>
+    <%= f.text_field :balance %>
+  </div>
+
+  <%= f.submit "Save" %>
+<% end %>
