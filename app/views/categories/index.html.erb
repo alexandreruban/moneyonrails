@@ -1,0 +1,16 @@
+<h1>Categories</h1>
+
+<%= link_to "Add category", new_category_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @categories %>
+  </tbody>
+</table>
