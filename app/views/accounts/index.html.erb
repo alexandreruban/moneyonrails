@@ -1,0 +1,16 @@
+<h1>Accounts</h1>
+
+<%= link_to "Add account", new_account_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Balance</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @accounts %>
+  </tbody>
+</table>
