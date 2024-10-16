@@ -1,0 +1,8 @@
+food:
+  name: Food
+  description: All food expenses
+  user: alex
+
+house:
+  name: House
+  user: alex
