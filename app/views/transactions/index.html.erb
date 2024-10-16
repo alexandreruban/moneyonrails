@@ -1,0 +1,20 @@
+<h1>Transactions</h1>
+
+<%= link_to "Add transaction", new_transaction_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Account</th>
+      <th>Category</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @transactions %>
+  </tbody>
+</table>

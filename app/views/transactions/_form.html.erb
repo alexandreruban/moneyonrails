@@ -1,0 +1,33 @@
+<%= form_with model: transaction do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <div>
+    <%= f.label :account_id %>
+    <%= f.collection_select :account_id, Current.user.accounts, :id, :name, include_blank: true %>
+  </div>
+
+  <div>
+    <%= f.label :category_id %>
+    <%= f.collection_select :category_id, Current.user.categories, :id, :name, include_blank: true %>
+  </div>
+
+  <%= f.submit "Save" %>
+<% end %>
