@@ -1,0 +1,13 @@
+rent:
+  account: bnp
+  category: home
+  name: Rent
+  date: 2024-10-16
+  amount: -1000
+
+restaurant:
+  account: bnp
+  name: Restaurant
+  description: Delicious pizza
+  date: 2024-10-16
+  amount: -30

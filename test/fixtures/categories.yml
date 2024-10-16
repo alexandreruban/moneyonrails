@@ -3,6 +3,6 @@ food:
   description: All food expenses
   user: alex
 
-house:
-  name: House
+home:
+  name: Home
   user: alex
