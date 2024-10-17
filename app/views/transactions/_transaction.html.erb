@@ -1,0 +1,12 @@
+<tr>
+  <td><%= transaction.name %></td>
+  <td><%= transaction.description %></td>
+  <td><%= transaction.date %></td>
+  <td><%= number_to_currency transaction.amount %></td>
+  <td><%= transaction.account.name %></td>
+  <td><%= transaction.category&.name || "Uncategorized" %></td>
+  <td>
+    <%= link_to "edit", edit_transaction_path(transaction) %>
+    <%= button_to "delete", transaction_path(transaction), method: :delete %>
+  </td>
+</tr>
