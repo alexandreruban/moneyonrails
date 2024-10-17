@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :set_transaction, only: %i[edit update destroy]
 
   def index
-    @transactions = Current.user.transactions.includes(:account, :category)
+    @page, @transactions = pagy(Current.user.transactions.includes(:account, :category).order(date: :desc, id: :asc), limit: 250)
   end
 
   def new
