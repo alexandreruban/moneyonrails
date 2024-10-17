@@ -18,3 +18,11 @@
     <%= render @transactions %>
   </tbody>
 </table>
+
+<% if @page.prev %>
+  <%= link_to "Previous page", transactions_path(page: @page.prev) %>
+<% end %>
+
+<% if @page.next %>
+  <%= link_to "Next page", transactions_path(page: @page.next) %>
+<% end %>
