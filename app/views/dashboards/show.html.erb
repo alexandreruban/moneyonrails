@@ -1,1 +1,20 @@
-<h1>Welcome <%= Current.user.email_address %></h1>
+<div>
+  Total earnings: <%= @dashboard.total_earnings %>
+</div>
+<div>
+  Total expenses: <%= @dashboard.total_expenses %>
+</div>
+<div>
+  Total savings: <%= @dashboard.total_savings %>
+</div>
+<div>
+  Saving rate: <%= @dashboard.savings_rate %>%
+</div>
+
+<hr>
+
+<h2>Income</h2>
+<%= render @dashboard.earnings_by_category %>
+
+<h2>Expenses</h2>
+<%= render @dashboard.expenses_by_category %>
