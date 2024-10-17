@@ -1,8 +1,13 @@
 food:
+  user: alex
   name: Food
   description: All food expenses
-  user: alex
 
 home:
-  name: Home
   user: alex
+  name: Home
+
+salary:
+  user: alex
+  name: Salary
+  income: true
