@@ -7,7 +7,21 @@ rent:
 
 restaurant:
   account: bnp
+  category: food
   name: Restaurant
-  description: Delicious pizza
   date: 2024-10-16
   amount: -30
+
+pizza:
+  account: bnp
+  name: Pizza
+  description: Delicious pizza
+  date: 2024-11-16
+  amount: -30
+
+salary:
+  account: citibank
+  category: salary
+  name: Salary
+  date: 2024-10-16
+  amount: 2000

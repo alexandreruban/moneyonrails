@@ -23,6 +23,13 @@
   </head>
 
   <body>
+    <header>
+      <%= link_to "Dashboard", root_path %>
+      <%= link_to "Transactions", transactions_path %>
+      <%= link_to "Accounts", accounts_path %>
+      <%= link_to "Categories", categories_path %>
+    </header>
+
     <%= yield %>
   </body>
 </html>
