@@ -1,0 +1,8 @@
+<h1>New import</h1>
+
+<%= form_with model: @import do |f| %>
+  <%= f.label :file %>
+  <%= f.file_field :file %>
+
+  <%= f.submit %>
+<% end %>

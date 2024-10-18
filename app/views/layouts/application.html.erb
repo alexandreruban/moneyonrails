@@ -28,7 +28,14 @@
       <%= link_to "Transactions", transactions_path %>
       <%= link_to "Accounts", accounts_path %>
       <%= link_to "Categories", categories_path %>
+      <%= link_to "Imports", imports_path %>
     </header>
+
+    <% flash.each do |type, message| %>
+      <div>
+        <%= message %>
+      </div>
+    <% end %>
 
     <%= yield %>
   </body>
