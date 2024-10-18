@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_10_18_130137) do
+ActiveRecord::Schema[8.0].define(version: 2024_10_18_131845) do
   create_table "accounts", force: :cascade do |t|
     t.string "name", null: false
     t.decimal "balance", precision: 15, scale: 2, null: false
@@ -58,6 +58,13 @@ ActiveRecord::Schema[8.0].define(version: 2024_10_18_130137) do
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
+  create_table "imports", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_imports_on_user_id"
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "ip_address"
@@ -93,6 +100,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_10_18_130137) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "categories", "users"
+  add_foreign_key "imports", "users"
   add_foreign_key "sessions", "users"
   add_foreign_key "transactions", "accounts"
   add_foreign_key "transactions", "categories"
